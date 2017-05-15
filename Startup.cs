@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using WebApplicationBasic.Models;
 
 namespace WebApplicationBasic
 {
@@ -26,10 +28,16 @@ namespace WebApplicationBasic
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            services.AddDbContext<PersonContext>(opt => opt.UseMySql(@"Server=localhost;database=kinderkultur;uid=root;pwd=;"));
+
             services.AddMvc();
+            
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            //services.AddSingleton<ITodoRepository, TodoRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
