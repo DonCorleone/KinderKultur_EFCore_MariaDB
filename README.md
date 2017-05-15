@@ -33,16 +33,14 @@ https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql/blob/master
 https://mariadb.com/kb/en/mariadb/starting-and-stopping-mariadb-automatically/  
 
 ## Client : Angular with WebPack and Bootstrap
-
-
-## Solution : Visual Studio Code
-
 generated with yeoman
 
     npm install -g yo generator-aspnetcore-spa 
     yo aspnetcore-spa 
-
 _http://blog.stevensanderson.com/2016/05/02/angular2-react-knockout-apps-on-aspnet-core/_
+    
+## Solution : Visual Studio Code
+
 _https://jonhilton.net/2016/12/01/fast-track-your-angular-2-and-net-core-web-app-development/_
 
 local development:  
