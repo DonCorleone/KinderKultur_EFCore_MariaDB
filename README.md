@@ -46,10 +46,6 @@ _https://jonhilton.net/2016/12/01/fast-track-your-angular-2-and-net-core-web-app
 local development:  
     _cd /Users/dev/Documents/angular/angularWebApi_
 
-
-
     dotnet restore  
     dotnet build  
     dotnet run  
-
-
