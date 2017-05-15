@@ -9,7 +9,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { HelloWorldComponent } from './components/helloworld/helloworld.component';
 import { WeatherComponent } from './components/weather/weather.component';
-
+import { PersonComponent } from './components/person/person.component';
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -20,7 +20,8 @@ import { WeatherComponent } from './components/weather/weather.component';
         FetchDataComponent,
         HomeComponent,
         HelloWorldComponent,
-        WeatherComponent
+        WeatherComponent,
+        PersonComponent
     ],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
@@ -32,6 +33,7 @@ import { WeatherComponent } from './components/weather/weather.component';
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'hello', component: HelloWorldComponent },
             { path: 'weather', component: WeatherComponent },
+            { path: 'person', component: PersonComponent},
             { path: '**', redirectTo: 'home' }
         ])
     ]

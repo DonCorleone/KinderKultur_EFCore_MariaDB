@@ -1,0 +1,26 @@
+<h1>Personen</h1>
+
+<label for="PersonId">Person-ID</label>
+<input type="text" id ="PersonId" [(ngModel)]="chosenPersonId" />
+<input type="button" value="Get PersonId" (click)="getPerson(chosenPersonId)" />
+
+<div *ngIf="person">
+    <h3>Angaben zu {{person.vorname}}</h3>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Vorname</th>
+                <th>eMail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{person.name}}</td>
+                <td>{{person.vorname}}</td>
+                <td>{{person.eMail}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
