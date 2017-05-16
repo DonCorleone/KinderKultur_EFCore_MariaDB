@@ -1,15 +1,18 @@
 <h1>Personen</h1>
-
-<label for="PersonId">Person-ID</label>
-
+<br>
+<input type="button" class="btn btn-default" value="Alle" (click)="getPersonen()" />
+<br>
+<br>
 <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." id ="PersonId" [(ngModel)]="chosenPersonId"/>
-      <span class="input-group-btn">
-        <input type="button" class="btn btn-default" value="Get PersonId" (click)="getPerson(chosenPersonId)" />
-      </span>
-    </div><!-- /input-group -->
-<div *ngIf="person">
-    <h3>Angaben zu {{person.vorname}}</h3>
+    <span class="input-group-addon" id="basic-addon1">Person ID:</span>
+    <input type="text" class="form-control" placeholder="Search for..." id ="PersonId" [(ngModel)]="chosenPersonId"/>
+    <span class="input-group-btn">
+        <input type="button" class="btn btn-default" value="Los!" (click)="getPerson(chosenPersonId)" />
+    </span>
+</div><!-- /input-group -->
+<br>
+<div *ngIf="personen">
+    <!--h3>Angaben zu {{person.vorname}}</h3-->
 
     <table class="table table-bordered table-striped">
         <thead>
@@ -20,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr *ngFor="let person of personen">
                 <td>{{person.name}}</td>
                 <td>{{person.vorname}}</td>
                 <td>{{person.eMail}}</td>

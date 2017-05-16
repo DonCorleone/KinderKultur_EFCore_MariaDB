@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 })
 export class PersonComponent{
     public person: Person;
+    public personen: Person[];
 
     constructor(private http: Http){
     }
@@ -15,6 +16,12 @@ export class PersonComponent{
     public getPerson(chosenPersonId: number){
         this.http.get('/api/person/' + chosenPersonId).subscribe(result => {
             this.person = result.json();
+        })
+    }
+
+    public getPersonen(){
+        this.http.get('/api/person/').subscribe(result => {
+            this.personen = result.json();
         })
     }
 }
