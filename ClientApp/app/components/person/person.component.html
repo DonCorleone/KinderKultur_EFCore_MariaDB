@@ -1,9 +1,13 @@
 <h1>Personen</h1>
 
 <label for="PersonId">Person-ID</label>
-<input type="text" id ="PersonId" [(ngModel)]="chosenPersonId" />
-<input type="button" value="Get PersonId" (click)="getPerson(chosenPersonId)" />
 
+<div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." id ="PersonId" [(ngModel)]="chosenPersonId"/>
+      <span class="input-group-btn">
+        <input type="button" class="btn btn-default" value="Get PersonId" (click)="getPerson(chosenPersonId)" />
+      </span>
+    </div><!-- /input-group -->
 <div *ngIf="person">
     <h3>Angaben zu {{person.vorname}}</h3>
 
