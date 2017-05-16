@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,5 +12,6 @@ namespace WebApplicationBasic.Models
         public string Name { get; set; }
         public string Vorname { get; set; }
         public string eMail { get; set; }
+        public DateTime Geburtsdatum {get; set;}
     }
 }

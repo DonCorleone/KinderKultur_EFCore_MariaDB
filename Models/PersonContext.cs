@@ -17,6 +17,5 @@ namespace WebApplicationBasic.Models
         //     => optionsBuilder
         //         .UseMySql(@"Server=localhost;database=kinderkultur;uid=root;pwd=;");
         public DbSet<Person> Personen { get; set; }
-
     }
 }
