@@ -1,27 +1,26 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-//import { Person } from 'WebApplicationBasic/Models';
 
 @Component({
     selector: 'person',
     template: require('./person.component.html')
 })
 export class PersonComponent{
-    public person: Person;
     public personen: Person[];
 
     constructor(private http: Http){
     }
 
     public getPerson(chosenPersonId: number){
+        this.personen = [];
         this.http.get('/api/person/' + chosenPersonId).subscribe(result => {
-            this.person = result.json();
+            this.personen[0] = result.json();
         })
     }
 
     public getPersonen(){
         this.http.get('/api/person/').subscribe(result => {
-            this.personen = result.json();
+            this.personen = result.json() as Person[];
         })
     }
 }
