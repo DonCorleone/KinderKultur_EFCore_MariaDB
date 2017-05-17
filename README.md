@@ -24,6 +24,8 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc
 https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite
 https://channel9.msdn.com/Events/Build/2017/B8094  
 https://docs.microsoft.com/en-us/aspnet/core/publishing/  
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/ (Contenso University)
+
 
 [EF Core Modelling](https://docs.microsoft.com/en-us/ef/core/modeling/)  
 [EF Core CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)  
