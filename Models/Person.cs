@@ -13,5 +13,6 @@ namespace WebApplicationBasic.Models
         public string Vorname { get; set; }
         public string eMail { get; set; }
         public DateTime Geburtsdatum {get; set;}
+        public string Geschlecht{get;set;}
     }
 }

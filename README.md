@@ -21,10 +21,12 @@ http://localhost:5000/api/Person/
 __inspired by:__
 
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc  
+https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite
+https://channel9.msdn.com/Events/Build/2017/B8094  
+https://docs.microsoft.com/en-us/aspnet/core/publishing/  
+
 [EF Core Modelling](https://docs.microsoft.com/en-us/ef/core/modeling/)  
 [EF Core CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)  
-https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite
-
     dotnet ef migrations add InitialCreate  
     dotnet ef database update  
 
