@@ -27,6 +27,7 @@ https://docs.microsoft.com/en-us/aspnet/core/publishing/
 
 [EF Core Modelling](https://docs.microsoft.com/en-us/ef/core/modeling/)  
 [EF Core CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)  
+
     dotnet ef migrations add InitialCreate  
     dotnet ef database update  
 
