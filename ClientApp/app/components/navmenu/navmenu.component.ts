@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
     styleUrls: ['./navmenu.component.css']
 })
 export class NavMenuComponent {
+    title = 'Kinderkultur 2.0';
+    modul: Modul = {
+        id: 1,
+        name: 'Person'
+    };
 }
+
+
+export class Modul {
+  id: number;
+  name: string;
+}
+
