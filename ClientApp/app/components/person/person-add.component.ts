@@ -6,7 +6,7 @@ import { Http } from '@angular/http';
     template: require('./person-add.component.html')
 })
 export class PersonAddComponent{
-    //public personen: Person[];
+    public person: Person;
 
     constructor(private http: Http){
     }
@@ -18,9 +18,9 @@ export class PersonAddComponent{
     //     })
     // }
 
-    // public getPersonen(){
-    //     this.http.get('/api/person/').subscribe(result => {
-    //         this.personen = result.json() as Person[];
-    //     })
-    // }
+    public savePerson(person: Person){
+        this.http.post('/api/person/', person).subscribe(result => {
+            this.person = result.json() as Person;
+        })
+    }
 }
