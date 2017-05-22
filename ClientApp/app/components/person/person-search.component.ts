@@ -3,11 +3,23 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'person-search',
-    template: require('./person-search.component.html')
+    template: require('./person-search.component.html'),
+    styles: [`
+    .selected {
+      background-color: #CFD8DC !important;
+      color: white;
+    }
+    .personen td:hover {
+        cursor: pointer;
+        color: #607D8B;
+        background-color: #DDD;
+    }
+  `]
 })
 export class PersonSearchComponent{
     public personen: Person[];
-
+    selectedPerson: Person;
+    
     constructor(private http: Http){
     }
 
@@ -22,6 +34,9 @@ export class PersonSearchComponent{
         this.http.get('/api/person/').subscribe(result => {
             this.personen = result.json() as Person[];
         })
+    }
+    onSelect(person: Person): void {
+        this.selectedPerson = person;
     }
 }
 
