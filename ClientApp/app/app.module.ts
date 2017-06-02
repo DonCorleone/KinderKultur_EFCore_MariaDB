@@ -7,6 +7,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { PersonComponent } from './components/person/person.component';
 import { PersonSearchComponent } from './components/person/person-search.component';
+import { PersonDetailComponent } from './components/person/person-detail.component';
 import { PersonAddComponent } from './components/person/person-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { PersonAddComponent } from './components/person/person-add.component';
         HomeComponent,
         PersonComponent,
         PersonSearchComponent,
+        PersonDetailComponent,
         PersonAddComponent
     ],
     imports: [

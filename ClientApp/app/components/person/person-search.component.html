@@ -32,12 +32,5 @@
             </tr>
         </tbody>
     </table>
-</div>
-<div *ngIf="selectedPerson">
-  <h2>{{selectedPerson.name}} details!</h2>
-  <div><label>id: </label>{{selectedPerson.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="selectedPerson.name" placeholder="name"/>
-  </div>
+    <person-detail [person]="selectedPerson"></person-detail>
 </div>

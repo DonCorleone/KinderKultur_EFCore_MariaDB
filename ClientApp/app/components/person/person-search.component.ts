@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { Person } from '../person/person';
 
 @Component({
     selector: 'person-search',
