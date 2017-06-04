@@ -24,11 +24,11 @@
         </thead>
         <tbody>
             <tr *ngFor="let person of personen" [class.selected]="person === selectedPerson" (click)="onSelect(person)">
-                <td>{{person.geschlecht}}</td>
-                <td>{{person.name}}</td>
-                <td>{{person.vorname}}</td>
+                <td>{{person.Geschlecht}}</td>
+                <td>{{person.Name}}</td>
+                <td>{{person.Vorname}}</td>
                 <td>{{person.eMail}}</td>
-                <td>{{person.geburtsdatum}}</td>
+                <td>{{person.Geburtsdatum}}</td>
             </tr>
         </tbody>
     </table>

@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import {Person} from './person';
-//import { personen } from './person-search.component';
+import { PERSONEN } from './mock-personen';
 
 @Injectable()
 export class PersonService {
-  getPersonen(): void {} //stub
+  getPersonen(): Promise<Person[]> {
+    return Promise.resolve(PERSONEN);
+  } //stub
 }
