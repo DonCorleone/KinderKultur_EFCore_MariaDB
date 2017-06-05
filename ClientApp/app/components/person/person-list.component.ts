@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Person } from '../person/person';
 import { PersonService } from './person.service';
 
 @Component({
-    selector: 'person-search',
-    template: require('./person-search.component.html'),
+    selector: 'person-list',
+    template: require('./person-list.component.html'),
     styles: [`
     .selected {
       background-color: #CFD8DC !important;
@@ -19,7 +19,7 @@ import { PersonService } from './person.service';
   `],
     providers: [PersonService]
 })
-export class PersonSearchComponent{
+export class PersonListComponent implements OnInit {
     public personen: Person[];
     selectedPerson: Person;
     
