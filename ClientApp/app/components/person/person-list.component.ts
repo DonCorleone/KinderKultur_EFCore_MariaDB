@@ -22,6 +22,8 @@ import { PersonService } from './person.service';
 export class PersonListComponent implements OnInit {
     public personen: Person[];
     selectedPerson: Person;
+
+    title = "Personen-Liste"
     
     // ToDo : wieder rein
     // constructor(private http: Http){
