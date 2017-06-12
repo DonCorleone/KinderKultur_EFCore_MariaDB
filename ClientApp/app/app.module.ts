@@ -14,6 +14,8 @@ import { PersonDetailComponent } from './components/person/person-detail.compone
 import { PersonAddComponent } from './components/person/person-add.component';
 import { PersonService } from './components/person/person.service';
 
+import { DashboardComponent } from './components/person/dashboard.component';
+
 @NgModule({
     bootstrap: [ AppComponent ],
     declarations: [
@@ -23,7 +25,8 @@ import { PersonService } from './components/person/person.service';
         PersonComponent,
         PersonListComponent,
         PersonDetailComponent,
-        PersonAddComponent
+        PersonAddComponent,
+        DashboardComponent
     ],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
@@ -35,6 +38,7 @@ import { PersonService } from './components/person/person.service';
             { path: 'my-personen', component: PersonComponent},
             { path: 'person-list', component: PersonListComponent},
             { path: 'person-add', component: PersonAddComponent},
+            { path: 'dashboard', component: DashboardComponent},
             { path: '**', redirectTo: 'home' }
         ])
     ],
