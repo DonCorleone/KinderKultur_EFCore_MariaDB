@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'person',
+  selector: 'my-personen',
   template: require('./person.component.html')
 })
 export class PersonComponent {

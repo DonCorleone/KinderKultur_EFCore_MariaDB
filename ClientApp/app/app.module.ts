@@ -32,7 +32,7 @@ import { PersonService } from './components/person/person.service';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'person', component: PersonComponent},
+            { path: 'my-personen', component: PersonComponent},
             { path: 'person-list', component: PersonListComponent},
             { path: 'person-add', component: PersonAddComponent},
             { path: '**', redirectTo: 'home' }
