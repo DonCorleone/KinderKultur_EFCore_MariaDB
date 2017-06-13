@@ -37,6 +37,7 @@ import { DashboardComponent } from './components/person/dashboard.component';
             { path: 'home', component: HomeComponent },
             { path: 'my-personen', component: PersonComponent},
             { path: 'person-list', component: PersonListComponent},
+            { path: 'detail/:id', component: PersonDetailComponent},
             { path: 'person-add', component: PersonAddComponent},
             { path: 'dashboard', component: DashboardComponent},
             { path: '**', redirectTo: 'home' }
