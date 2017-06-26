@@ -13,6 +13,12 @@ export class InMemoryDataService implements InMemoryDbService {
         {Key: 19, Geschlecht: 'M', Name: 'Magma', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') },
         {Key: 20, Geschlecht: 'M', Name: 'Tornado', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') }
     ];
+/*    [
+      {"key":1,"name":"Hugentobler","vorname":"Fritz","eMail":"fritz@hugentobler.com","geburtsdatum":"1980-01-01T00:00:00","geschlecht":null},
+      {"key":2,"name":"Wieland","vorname":"Leyla","eMail":"goera@holand.com","geburtsdatum":"2014-01-27T00:00:00","geschlecht":null},
+      {"key":3,"name":"Wieland","vorname":"Natalie","eMail":"nat_wieland@hotmail.com","geburtsdatum":"1980-01-25T00:00:00","geschlecht":null},
+      {"key":4,"name":"Marty","vorname":"Andreas","eMail":"xy@hotmail.com","geburtsdatum":"1965-08-07T00:00:00","geschlecht":null}
+    ]*/
     return {personen};
   }
 }

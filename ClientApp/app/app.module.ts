@@ -7,9 +7,9 @@ import { UniversalModule } from 'angular2-universal';
 
 import { AppRoutingModule } from './app-routing.module';
 
-// Imports for loading & configuring the in-memory web api
+/*// Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './in-memory-data.service';*/
 
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -40,7 +40,7 @@ import { DashboardComponent } from './components/person/dashboard.component';
         //BrowserModule,
         FormsModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService),
+       // InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule
     ],
     providers: [

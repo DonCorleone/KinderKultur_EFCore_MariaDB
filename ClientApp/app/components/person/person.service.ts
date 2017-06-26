@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class PersonService {
-  private personUrl = '/api/personen';  // URL to web api
+  private personUrl = '/api/Person';  // URL to web api
 
   constructor (private http: Http){
   };
@@ -14,7 +14,7 @@ export class PersonService {
   getPersonen(): Promise<Person[]> {
     return this.http.get(this.personUrl)
               .toPromise()
-              .then(response => response.json().data as Person[])
+              .then(response => response.json() as Person[])
               .catch(this.handleError);
   
    //return Promise.resolve(this.personen);
@@ -34,7 +34,7 @@ export class PersonService {
       .then(response => response.json().data as Person)
       .catch(this.handleError);*/
    return this.getPersonen()
-              .then(personen => personen.find(person => person.Key === id));
+              .then(personen => personen.find(person => person.key === id));
   }
 
 /*  getPerson(id: number): Promise<Person> {
@@ -44,7 +44,7 @@ export class PersonService {
   private headers = new Headers({'Content-Type': 'application/json'});
 
   update(person: Person): Promise<Person> {
-    const url = `${this.personUrl}/${person.Key}`;
+    const url = `${this.personUrl}/${person.key}`;
     return this.http
       .put(url, JSON.stringify(person), {headers: this.headers})
       .toPromise()

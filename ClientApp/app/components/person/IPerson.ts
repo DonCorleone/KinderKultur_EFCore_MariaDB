@@ -1,8 +1,8 @@
 interface Person {
-    Key: number;
-    Geschlecht: string;
-    Name: string;
-    Vorname: string;
+    key: number;
+    geschlecht: string;
+    name: string;
+    vorname: string;
     eMail: string;
-    Geburtsdatum: Date;
+    geburtsdatum: Date;
 }

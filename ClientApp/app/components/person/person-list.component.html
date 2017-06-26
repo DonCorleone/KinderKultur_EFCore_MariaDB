@@ -23,17 +23,17 @@
         </thead>
         <tbody>
             <tr *ngFor="let person of personen" [class.selected]="person === selectedPerson" (click)="onSelect(person)">
-                <td>{{person.Geschlecht}}</td>
-                <td>{{person.Name}}</td>
-                <td>{{person.Vorname}}</td>
+                <td>{{person.geschlecht}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.vorname}}</td>
                 <td>{{person.eMail}}</td>
-                <td>{{person.Geburtsdatum}}</td>
+                <td>{{person.geburtsdatum}}</td>
             </tr>
         </tbody>
     </table>
     <div *ngIf="selectedPerson">
         <h2>
-            {{selectedPerson.Name | uppercase}} mi piace
+            {{selectedPerson.name | uppercase}} mi piace
         </h2>
         <button (click)="gotoDetail()">Looos! Details.</button>
     </div>

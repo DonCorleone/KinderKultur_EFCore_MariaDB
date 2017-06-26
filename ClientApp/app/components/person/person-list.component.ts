@@ -54,7 +54,7 @@ export class PersonListComponent implements OnInit {
     }
 
     gotoDetail(): void {
-        this.router.navigate(['/detail', this.selectedPerson.Key]);
+        this.router.navigate(['/detail', this.selectedPerson.key]);
     }   
 }
 
