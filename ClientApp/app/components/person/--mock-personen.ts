@@ -1,4 +1,4 @@
-import { Person } from './person';
+/*import { Person } from './person';
 export const PERSONEN: Person[] = [
   {Key: 11, Geschlecht: 'M', Name: 'Mr. Nice', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') },
   {Key: 12, Geschlecht: 'M', Name: 'Narco', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') },
@@ -10,4 +10,4 @@ export const PERSONEN: Person[] = [
   {Key: 18, Geschlecht: 'M', Name: 'Dr IQ', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') },
   {Key: 19, Geschlecht: 'M', Name: 'Magma', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') },
   {Key: 20, Geschlecht: 'M', Name: 'Tornado', Vorname:'Fritz', eMail: 'a@b.com', Geburtsdatum: new Date('1968-11-16T00:00:00') }
-];
+];*/
