@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UniversalModule } from 'angular2-universal';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -32,16 +34,7 @@ import { DashboardComponent } from './components/person/dashboard.component';
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
         //BrowserModule,
         FormsModule,
-        RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'my-personen', component: PersonComponent},
-            { path: 'person-list', component: PersonListComponent},
-            { path: 'detail/:id', component: PersonDetailComponent},
-            { path: 'person-add', component: PersonAddComponent},
-            { path: 'dashboard', component: DashboardComponent},
-            { path: '**', redirectTo: 'home' }
-        ])
+        AppRoutingModule
     ],
     providers: [
         PersonService

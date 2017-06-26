@@ -10,7 +10,7 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'person-detail',
-  template: require('./person-detail.component.html')
+  templateUrl: './person-detail.component.html'
   })
 export class PersonDetailComponent implements OnInit {
   constructor(

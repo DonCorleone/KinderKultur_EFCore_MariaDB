@@ -41,6 +41,45 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5000",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        },
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceRoot}/wwwroot"
+        },
+        {
+            "name": "Launch index.html (disable sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "sourceMaps": true,
+            "file": "${workspaceRoot}/index.html"
+        },
+                {
+            "name": "Attach",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "url": "http://localhost:5000/",
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "Attach to url with files served from ./out",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "url": "http://localhost:5000/",
+            "webRoot": "${workspaceRoot}"
         }
     ]
 }

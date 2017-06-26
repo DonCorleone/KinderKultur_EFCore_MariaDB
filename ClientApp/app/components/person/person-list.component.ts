@@ -1,25 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 import { Person } from '../person/person';
 import { PersonService } from './person.service';
 
 @Component({
     selector: 'person-list',
-    template: require('./person-list.component.html'),
-    styles: [`
-    .selected {
-      background-color: #CFD8DC !important;
-      color: white;
-    }
-    .personen td:hover {
-        cursor: pointer;
-        color: #607D8B;
-        background-color: #DDD;
-    }
-  `],
+    templateUrl: './person-list.component.html',
+    styleUrls: ['./person-list.component.css'],
     providers: [PersonService]
 })
 export class PersonListComponent implements OnInit {
+    // toh :: heroes.component.ts
+
     public personen: Person[];
     selectedPerson: Person;
 
@@ -29,7 +22,9 @@ export class PersonListComponent implements OnInit {
     // constructor(private http: Http){
     // }
 
-    constructor(private personService: PersonService) { }
+    constructor(
+        private personService: PersonService, 
+        private router: Router) { }
 
     public getPerson(chosenPersonId: number){
     // ToDo : wieder rein
@@ -57,5 +52,9 @@ export class PersonListComponent implements OnInit {
     ngOnInit(): void {
         this.getPersonen();
     }
+
+    gotoDetail(): void {
+        this.router.navigate(['/detail', this.selectedPerson.Key]);
+    }   
 }
 

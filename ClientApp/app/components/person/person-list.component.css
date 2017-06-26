@@ -1,0 +1,9 @@
+    .selected {
+      background-color: #CFD8DC !important;
+      color: white;
+    }
+    .personen td:hover {
+        cursor: pointer;
+        color: #607D8B;
+        background-color: #DDD;
+    }

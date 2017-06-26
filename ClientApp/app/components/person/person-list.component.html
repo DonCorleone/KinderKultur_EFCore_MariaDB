@@ -31,5 +31,10 @@
             </tr>
         </tbody>
     </table>
-    <person-detail [person]="selectedPerson"></person-detail>
+    <div *ngIf="selectedPerson">
+        <h2>
+            {{selectedPerson.Name | uppercase}} mi piace
+        </h2>
+        <button (click)="gotoDetail()">Looos! Details.</button>
+    </div>
 </div>

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'my-personen',
-  template: require('./person.component.html')
+    selector: 'my-personen',
+    templateUrl: './person.component.html',
+    styleUrls: ['./person.component.css'],
 })
+
 export class PersonComponent {
   title = 'Personen';
 }
