@@ -28,13 +28,13 @@ export class PersonService {
 
   getPerson(id: number): Promise<Person> {
 
-/*    const url = `${this.personUrl}/${id}`;
+    const url = `${this.personUrl}/${id}`;
     return this.http.get(url)
       .toPromise()
-      .then(response => response.json().data as Person)
-      .catch(this.handleError);*/
-   return this.getPersonen()
-              .then(personen => personen.find(person => person.key === id));
+      .then(response => response.json() as Person)
+      .catch(this.handleError);
+/*   return this.getPersonen()
+              .then(personen => personen.find(person => person.key === id));*/
   }
 
 /*  getPerson(id: number): Promise<Person> {
