@@ -45,5 +45,44 @@ namespace WebApplicationBasic.Controllers
 
             return CreatedAtRoute("GetPerson", new { id = person.Key }, person);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(long id, [FromBody] Person person)
+        {
+            if (person == null || person.Key != id)
+            {
+                return BadRequest();
+            }
+
+            var item = _personRepository.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            item.Name = person.Name;
+            item.Vorname = person.Vorname;
+            item.Geschlecht = person.Geschlecht;
+            item.Geburtsdatum = person.Geburtsdatum;
+            item.eMail = person.eMail;
+
+            _personRepository.Update(item);
+           // _personRepository.SaveChanges();
+            return new NoContentResult();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            var person = _personRepository.Find(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            _personRepository.Remove(id);
+            //_context.SaveChanges();
+            return new NoContentResult();
+        }
     }
 }

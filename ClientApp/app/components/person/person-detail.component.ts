@@ -24,7 +24,10 @@ export class PersonDetailComponent implements OnInit {
       .subscribe(person => this.person = person);
   }
   @Input() person: Person;
-
+  save(): void {
+    this.personService.update(this.person)
+      .then(() => this.goBack());
+  }
   goBack(): void {
     this.location.back();
   }
