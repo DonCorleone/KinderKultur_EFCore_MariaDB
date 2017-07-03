@@ -28,6 +28,8 @@
                 <td>{{person.vorname}}</td>
                 <td>{{person.eMail}}</td>
                 <td>{{person.geburtsdatum}}</td>
+                <button class="delete"
+                    (click)="delete(person); $event.stopPropagation()">x</button>
             </tr>
         </tbody>
     </table>
@@ -36,5 +38,11 @@
             {{selectedPerson.name | uppercase}} mi piace
         </h2>
         <button (click)="gotoDetail()">Looos! Details.</button>
+    </div>
+    <div>
+        <label>Person name:</label> <input #personName />
+        <button (click)="add(personName.value); personName.value=''">
+            Add
+        </button>
     </div>
 </div>

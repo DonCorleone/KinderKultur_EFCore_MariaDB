@@ -25,7 +25,7 @@ https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite
 https://channel9.msdn.com/Events/Build/2017/B8094  
 https://docs.microsoft.com/en-us/aspnet/core/publishing/  
 [Contenso University (https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)  
-[Tour of Heroes (https://angular.io/docs/ts/latest/tutorial/)](https://angular.io/docs/ts/latest/tutorial/)  
+[Tour of Heroes (https://angular.io/docs/ts/latest/tutorial/)](https://angular.io/tutorial/)  
 
 [EF Core Modelling (https://docs.microsoft.com/en-us/ef/core/modeling/)](https://docs.microsoft.com/en-us/ef/core/modeling/)  
 [EF Core CLI (https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)  

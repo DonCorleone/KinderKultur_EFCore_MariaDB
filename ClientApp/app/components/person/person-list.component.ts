@@ -34,13 +34,24 @@ export class PersonListComponent implements OnInit {
         })*/
     }
 
-    // ToDo : wieder rein
-    /*public getPersonen(){
-        // ToDo : wieder rein
-        this.http.get('/api/person/').subscribe(result => {
-            this.personen = result.json() as Person[];
-        })
-    }*/
+    add(name: string): void {
+        name = name.trim();
+        if (!name) { return; }
+        this.personService.create(name)
+            .then(hero => {
+            this.personen.push(hero);
+            this.selectedPerson = null;
+            });
+    }
+
+    delete(person: Person): void {
+        this.personService
+            .delete(person.key)
+            .then(() => {
+                this.personen = this.personen.filter(h => h !== person);
+                if (this.selectedPerson === person) { this.selectedPerson = null; }
+            });
+        }
     getPersonen(): void {
         this.personService.getPersonen().then(personen => this.personen = personen);
     }

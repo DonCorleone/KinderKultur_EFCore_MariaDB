@@ -7,23 +7,24 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class PersonService {
   private personUrl = '/api/Person';  // URL to web api
+  private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor (private http: Http){
   };
+
+  create(name: string): Promise<Person> {
+    return this.http
+      .post(this.personUrl, JSON.stringify({name: name}), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json() as Person)
+      .catch(this.handleError);
+  }
 
   getPersonen(): Promise<Person[]> {
     return this.http.get(this.personUrl)
               .toPromise()
               .then(response => response.json() as Person[])
               .catch(this.handleError);
-  
-   //return Promise.resolve(this.personen);
-        // public getPerson(chosenPersonId: number){
-    //     this.personen = [];
-    //     this.http.get('/api/person/' + chosenPersonId).subscribe(result => {
-    //         this.personen[0] = result.json();
-    //     })
-    // }
   } //stub
 
   getPerson(id: number): Promise<Person> {
@@ -33,22 +34,22 @@ export class PersonService {
       .toPromise()
       .then(response => response.json() as Person)
       .catch(this.handleError);
-/*   return this.getPersonen()
-              .then(personen => personen.find(person => person.key === id));*/
   }
-
-/*  getPerson(id: number): Promise<Person> {
-
-  }*/
-
-  private headers = new Headers({'Content-Type': 'application/json'});
-
+  
   update(person: Person): Promise<Person> {
     const url = `${this.personUrl}/${person.key}`;
     return this.http
       .put(url, JSON.stringify(person), {headers: this.headers})
       .toPromise()
       .then(() => person)
+      .catch(this.handleError);
+  }
+
+  delete(id: number): Promise<void> {
+    const url = `${this.personUrl}/${id}`;
+    return this.http.delete(url, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
       .catch(this.handleError);
   }
   private handleError(error: any): Promise<any> {
