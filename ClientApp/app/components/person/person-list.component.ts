@@ -51,7 +51,8 @@ export class PersonListComponent implements OnInit {
                 this.personen = this.personen.filter(h => h !== person);
                 if (this.selectedPerson === person) { this.selectedPerson = null; }
             });
-        }
+    
+    }
     getPersonen(): void {
         this.personService.getPersonen().then(personen => this.personen = personen);
     }
