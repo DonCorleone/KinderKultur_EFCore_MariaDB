@@ -19,6 +19,7 @@ import { PersonComponent } from './components/person/person.component';
 import { PersonListComponent } from './components/person/person-list.component';
 import { PersonDetailComponent } from './components/person/person-detail.component';
 import { PersonAddComponent } from './components/person/person-add.component';
+import { PersonSearchComponent } from './components/person/person-search.component';
 import { PersonService } from './components/person/person.service';
 
 import { DashboardComponent } from './components/person/dashboard.component';
@@ -33,6 +34,7 @@ import { DashboardComponent } from './components/person/dashboard.component';
         PersonListComponent,
         PersonDetailComponent,
         PersonAddComponent,
+        PersonSearchComponent,
         DashboardComponent
     ],
     imports: [
