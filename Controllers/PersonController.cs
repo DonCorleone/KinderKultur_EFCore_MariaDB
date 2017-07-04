@@ -22,6 +22,17 @@ namespace WebApplicationBasic.Controllers
             return _personRepository.GetAll();
         }
 
+        [HttpGet("{searchTerm}", Name = "FindPerson")]
+        public IActionResult GetBySearchTerm(string searchTerm)
+        {
+            var item = _personRepository.FindPerson(searchTerm);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
+        }
+
         [HttpGet("{id}", Name = "GetPerson")]
         public IActionResult GetById(long id)
         {

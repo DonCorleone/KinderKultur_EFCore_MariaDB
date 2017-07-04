@@ -32,6 +32,11 @@ namespace WebApplicationBasic.Models
             return _context.Personen.FirstOrDefault(t => t.Key == key);
         }
 
+        public IEnumerable<Person> FindPerson(string searchTerm)
+        {
+            return _context.Personen.Where(t => t.Name.Contains(searchTerm));
+        }
+
         public void Remove(long key)
         {
             var entity = _context.Personen.First(t => t.Key == key);
